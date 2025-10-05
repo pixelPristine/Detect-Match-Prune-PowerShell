@@ -6,6 +6,7 @@ A PowerShell Script to detect files in one directory and match (and optionally d
 - The driver then calls the "detect_files.ps1" script passing the path to the base folder. The script then scans all files within and stores their paths, relative to the base folder as the root in  "files_list.txt" file.
 - After asking for confirmation the driver then executes the "match_files.ps1" passing the path to the target folder and "files_list.txt". The script scans for all entries in the files_list.txt in the target directory using the paths appended to the target folder path.
 - Finally, after confirmation from the user, the "delete_files.ps1" is executed. This script is identical to the match_files script aside from having the additional step of deleting each detected file.
+- The Script will show for each individual file whether it is detected/deleted or not on the PowerShell terminal.
 
 I made this script to remove specific files (e.g extracted from an archive) that were placed in an already populated directory with several layers of branching child folders without having to manually locate and delete them.
 
